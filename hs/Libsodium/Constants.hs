@@ -297,8 +297,9 @@ TN(CRYPTO_VERIFY_32_BYTES, 32, CSize, crypto_verify_32_bytes)
 TN(CRYPTO_VERIFY_64_BYTES, 64, CSize, crypto_verify_64_bytes)
 TN(RANDOMBYTES_SEEDBYTES, 32, CSize, randombytes_seedbytes)
 TN(SODIUM_LIBRARY_MINIMAL, 0, CInt, sodium_library_minimal)
-TN(SODIUM_LIBRARY_VERSION_MAJOR, 10, CInt, sodium_library_version_major)
-TN(SODIUM_LIBRARY_VERSION_MINOR, 3, CInt, sodium_library_version_minor)
+-- https://github.com/jedisct1/libsodium/blob/1.0.19/configure.ac
+TN(SODIUM_LIBRARY_VERSION_MAJOR, 26, CInt, sodium_library_version_major)
+TN(SODIUM_LIBRARY_VERSION_MINOR, 1, CInt, sodium_library_version_minor)
 
 -- These have no corresponding C functions
 TN(SODIUM_BASE64_VARIANT_ORIGINAL, 1, CInt, sodium_base64_variant_original)
@@ -341,4 +342,4 @@ TS(CRYPTO_SECRETBOX_PRIMITIVE, "xsalsa20poly1305", crypto_secretbox_primitive)
 TS(CRYPTO_SHORTHASH_PRIMITIVE, "siphash24", crypto_shorthash_primitive)
 TS(CRYPTO_SIGN_PRIMITIVE, "ed25519", crypto_sign_primitive)
 TS(CRYPTO_STREAM_PRIMITIVE, "xsalsa20", crypto_stream_primitive)
-TS(SODIUM_VERSION_STRING, "1.0.18", sodium_version_string)
+TS(SODIUM_VERSION_STRING, "1.0.19", sodium_version_string)

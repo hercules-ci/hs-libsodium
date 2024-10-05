@@ -1,3 +1,7 @@
+# Unreleased
+
+* Require sodium 1.0.19
+
 # Version 1.0.18.3
 
 * Allocation tools such as `crypto_aead_aes256gcm_state'malloc` now

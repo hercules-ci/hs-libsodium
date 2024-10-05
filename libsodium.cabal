@@ -1,6 +1,6 @@
 cabal-version: 2.4
 name: libsodium
-version: 1.0.18.3
+version: 1.0.19.0
 license: ISC
 license-file: LICENSE
 extra-source-files: README.md CHANGELOG.md
@@ -13,7 +13,7 @@ synopsis: Low-level bindings to the libsodium C library
 description: Low-level bindings to the libsodium C library
 homepage: https://github.com/k0001/hs-libsodium
 bug-reports: https://github.com/k0001/hs-libsodium/issues
-tested-with: GHC ==9.2.6
+tested-with: GHC ==9.4.8
 extra-source-files: c/*.h c/*.c
 
 
@@ -31,7 +31,7 @@ common basic
   default-language: GHC2021
   ghc-options: -Wall -Werror=incomplete-patterns
   build-depends: base == 4.*
-  pkgconfig-depends: libsodium == 1.0.18
+  pkgconfig-depends: libsodium == 1.0.19
   if flag(use-build-tool-depends)
     build-tool-depends: c2hs:c2hs
 
