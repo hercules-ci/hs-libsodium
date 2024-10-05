@@ -29,21 +29,21 @@
                 s = self.devShells.${system};
               in [
                 p.libsodium__ghcDefault
-                p.libsodium__ghc925
-                p.libsodium__ghc943
+                p.libsodium__ghc92
+                p.libsodium__ghc94
 
                 p.libsodium__ghcDefault.doc
-                p.libsodium__ghc925.doc
-                p.libsodium__ghc943.doc
+                p.libsodium__ghc92.doc
+                p.libsodium__ghc94.doc
 
                 s.libsodium__ghcDefault
-                s.libsodium__ghc925
-                s.libsodium__ghc943
+                s.libsodium__ghc92
+                s.libsodium__ghc94
               ];
             };
             libsodium__ghcDefault = pkgs.haskellPackages.libsodium;
-            libsodium__ghc925 = pkgs.haskell.packages.ghc925.libsodium;
-            libsodium__ghc943 = pkgs.haskell.packages.ghc943.libsodium;
+            libsodium__ghc92 = pkgs.haskell.packages.ghc92.libsodium;
+            libsodium__ghc94 = pkgs.haskell.packages.ghc94.libsodium;
           });
       devShells =
         nixpkgs.lib.genAttrs [ "x86_64-linux" "i686-linux" "aarch64-linux" ]
@@ -57,10 +57,10 @@
                 nativeBuildInputs = [ pkgs.cabal-install pkgs.cabal2nix ];
               };
           in {
-            default = self.devShells.${system}.libsodium__ghc943;
+            default = self.devShells.${system}.libsodium__ghc94;
             libsodium__ghcDefault = mkShellFor pkgs.haskellPackages;
-            libsodium__ghc925 = mkShellFor pkgs.haskell.packages.ghc925;
-            libsodium__ghc943 = mkShellFor pkgs.haskell.packages.ghc943;
+            libsodium__ghc92 = mkShellFor pkgs.haskell.packages.ghc92;
+            libsodium__ghc94 = mkShellFor pkgs.haskell.packages.ghc94;
           });
     };
 }
