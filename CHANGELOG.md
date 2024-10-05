@@ -1,5 +1,9 @@
 # Unreleased
 
+* Require sodium 1.0.20
+
+# ...
+
 * Require sodium 1.0.19
 
 # Version 1.0.18.3
