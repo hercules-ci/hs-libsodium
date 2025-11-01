@@ -29,21 +29,29 @@
                 s = self.devShells.${system};
               in [
                 p.libsodium__ghcDefault
-                p.libsodium__ghc92
                 p.libsodium__ghc94
+                p.libsodium__ghc96
+                p.libsodium__ghc98
+                p.libsodium__ghc910
 
                 p.libsodium__ghcDefault.doc
-                p.libsodium__ghc92.doc
                 p.libsodium__ghc94.doc
+                p.libsodium__ghc96.doc
+                p.libsodium__ghc98.doc
+                p.libsodium__ghc910.doc
 
                 s.libsodium__ghcDefault
-                s.libsodium__ghc92
                 s.libsodium__ghc94
+                s.libsodium__ghc96
+                s.libsodium__ghc98
+                s.libsodium__ghc910
               ];
             };
             libsodium__ghcDefault = pkgs.haskellPackages.libsodium;
-            libsodium__ghc92 = pkgs.haskell.packages.ghc92.libsodium;
             libsodium__ghc94 = pkgs.haskell.packages.ghc94.libsodium;
+            libsodium__ghc96 = pkgs.haskell.packages.ghc96.libsodium;
+            libsodium__ghc98 = pkgs.haskell.packages.ghc98.libsodium;
+            libsodium__ghc910 = pkgs.haskell.packages.ghc910.libsodium;
           });
       devShells =
         nixpkgs.lib.genAttrs [ "x86_64-linux" "i686-linux" "aarch64-linux" ]
@@ -57,10 +65,12 @@
                 nativeBuildInputs = [ pkgs.cabal-install pkgs.cabal2nix ];
               };
           in {
-            default = self.devShells.${system}.libsodium__ghc94;
+            default = self.devShells.${system}.libsodium__ghc910;
             libsodium__ghcDefault = mkShellFor pkgs.haskellPackages;
-            libsodium__ghc92 = mkShellFor pkgs.haskell.packages.ghc92;
             libsodium__ghc94 = mkShellFor pkgs.haskell.packages.ghc94;
+            libsodium__ghc96 = mkShellFor pkgs.haskell.packages.ghc96;
+            libsodium__ghc98 = mkShellFor pkgs.haskell.packages.ghc98;
+            libsodium__ghc910 = mkShellFor pkgs.haskell.packages.ghc910;
           });
     };
 }
