@@ -1,6 +1,6 @@
 cabal-version: 2.4
 name: libsodium
-version: 1.0.19.0
+version: 1.0.20.0
 license: ISC
 license-file: LICENSE
 extra-source-files: README.md CHANGELOG.md
@@ -31,7 +31,7 @@ common basic
   default-language: GHC2021
   ghc-options: -Wall -Werror=incomplete-patterns
   build-depends: base == 4.*
-  pkgconfig-depends: libsodium == 1.0.19
+  pkgconfig-depends: libsodium == 1.0.20
   if flag(use-build-tool-depends)
     build-tool-depends: c2hs:c2hs
 

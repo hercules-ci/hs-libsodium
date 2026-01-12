@@ -2,7 +2,7 @@
 , tasty-hunit }:
 mkDerivation {
   pname = "libsodium";
-  version = "1.0.19.0";
+  version = "1.0.20.0";
   src = lib.sources.cleanSource ./.;
   libraryToolDepends = [ c2hs ];
   libraryHaskellDepends = [ base ];
